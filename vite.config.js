@@ -9,6 +9,10 @@ const AUDIO_TRACKS_FILE = path.resolve(__dirname, 'src/data/audioTracks.js')
 function generateAudioTracksFile() {
   const files = fs.existsSync(AUDIO_DIR) ? fs.readdirSync(AUDIO_DIR) : []
 
+export default defineConfig({
+  base: '/sherlock/',  // важно: слэши с двух сторон!
+})
+
   const tracks = files
     .filter(file => /\.mp3$/i.test(file))
     .sort((a, b) => a.localeCompare(b, 'en', { numeric: true, sensitivity: 'base' }))
