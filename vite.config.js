@@ -10,8 +10,6 @@ function generateAudioTracksFile() {
   const files = fs.existsSync(AUDIO_DIR) ? fs.readdirSync(AUDIO_DIR) : []
 
 
-export default defineConfig({
-  base: '/'
   
 
   const tracks = files
