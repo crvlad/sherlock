@@ -13,9 +13,6 @@ function generateAudioTracksFile() {
 export default defineConfig({
   base: '/'
   
-export default defineConfig({
-  base: '/sherlock/',  // важно: слэши с двух сторон!
-})
 
   const tracks = files
     .filter(file => /\.mp3$/i.test(file))
